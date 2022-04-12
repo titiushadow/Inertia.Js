@@ -2,13 +2,22 @@
 
 namespace App\Http\Controllers;
 
-
+use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class homeController extends Controller
 {
     public function index()
     {
-        return Inertia::render('home');
+        $user = 'Meseikers';
+
+        return Inertia::render('home', [
+            'user' => $user
+        ]);
+    }
+
+    public function about()
+    {
+        return Inertia::render('about');
     }
 }
