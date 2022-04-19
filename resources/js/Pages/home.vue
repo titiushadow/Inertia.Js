@@ -1,32 +1,35 @@
 <template>
-  <main>
-        <header>
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-        </header>
-
-        <article>
-            <slot />
-        </article>
-    </main>
-
     <div>
-        <h1>ola</h1>
+      <h1>Hello world {{ name }}</h1>
+      <p>Uso os seguintes frameworks:</p>
+        <ul>
+            <li v-for="framework of frameworks" v-text="framework"></li>
+        </ul>
     </div>
-
 </template>
 
 <script>
-import { Link } from "@inertiajs/inertia-vue3";
 export default {
-    name: "Layout",
-    components: {
-        Link,
+    name: 'home',
+    props: {
+        name: String,
+        frameworks: Array
     },
-};
-
+}
 </script>
 
 <style>
+ h1 {
+     font-family: bold;
+     font-size: 50px;
+ }
 
+ p {
+     font-family: bold;
+     font-size: 25px;
+ }
+
+ li {
+     font-size: 20px;
+ }
 </style>
