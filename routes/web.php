@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [homeController::class, 'index'])->name('index');
-Route::get('/about', [homeController::class, 'about'])->name('about');
+Route::get('/', function () {
+    return Inertia::render('home', [
+        'name' => 'Mesaque',
+        'frameworks' => ['Vue', 'Inertia', 'Laravel']
+    ]);
+});
