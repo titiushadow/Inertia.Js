@@ -29,9 +29,6 @@ Route::get('/users', function () {
 });
 
 Route::get('/settings', function () {
-
-    sleep(2);
-
     return Inertia::render('Settings');
 });
 
