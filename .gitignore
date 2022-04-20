@@ -12,3 +12,5 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+resources/js/components/ExampleComponent.vue
+resources/js/Pages/about.vue
