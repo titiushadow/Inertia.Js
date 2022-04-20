@@ -3,14 +3,14 @@
       <h1>Hello world {{ name }}</h1>
 
 <!-- Pegando array que esta nas rotas através do props  -->
-      <p>Uso os seguintes frameworks:</p>
+      <!-- <p>Uso os seguintes frameworks:</p>
         <ul>
             <li v-for="framework of frameworks" v-text="framework"></li>
         </ul>
-    </div>
+    </div> -->
 
 <Nav />
-
+</div>
 </template>
 
 <script>
