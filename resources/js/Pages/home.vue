@@ -1,6 +1,7 @@
 <template>
-    <div>
-      <h1>Hello world {{ name }}</h1>
+<Layout>
+    <h1 class="text-3xl font-bold">Home</h1>
+</Layout>
 
 <!-- Pegando array que esta nas rotas através do props  -->
       <!-- <p>Uso os seguintes frameworks:</p>
@@ -9,28 +10,22 @@
         </ul>
     </div> -->
 
-<Nav />
-</div>
 </template>
 
 <script>
-import Nav from "../Shared/Nav.vue";
+import Layout from "../Shared/Layout.vue";
 
 export default {
     name: 'home',
-    components:{ Nav },
+    components:{ Layout },
     props: {
-        name: String,
-        frameworks: Array
+        // name: String,
+        // frameworks: Array
     },
 };
 </script>
 
 <style>
- h1 {
-     font-family: bold;
-     font-size: 50px;
- }
 
  p {
      font-family: bold;
