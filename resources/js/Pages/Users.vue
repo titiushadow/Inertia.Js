@@ -20,21 +20,17 @@
 
 </template>
 
-<script>
 
-
+<script setup>
 import { Link } from "@inertiajs/inertia-vue3"
 import Layout from "../Shared/Layout";
 
-export default {
-   name: 'home',
-    components: { Layout, Link },
-    props: {
-        time: String,
-        name: String,
-    },
-};
+defineProps({
+    time: String,
+    name: String,
+});
 </script>
+
 
 <style>
 

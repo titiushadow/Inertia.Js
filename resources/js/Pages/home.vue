@@ -17,17 +17,12 @@
 
 </template>
 
-<script>
+<script setup>
 import Layout from "../Shared/Layout.vue";
 
-export default {
-    name: 'home',
-    components:{ Layout },
-    props: {
-         name: String,
-        // frameworks: Array
-    },
-};
+defineProps({
+    name: String,
+});
 </script>
 
 <style>
