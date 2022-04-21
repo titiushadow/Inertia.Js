@@ -1,6 +1,11 @@
 <template>
 <Layout>
     <h1 class="text-3xl font-bold">Home</h1>
+      <div class="flex items-center">
+            <p class="text-md ml-4">
+                Welcome Back, {{ name }}!
+            </p>
+      </div>
 </Layout>
 
 <!-- Pegando array que esta nas rotas através do props  -->
@@ -19,7 +24,7 @@ export default {
     name: 'home',
     components:{ Layout },
     props: {
-        // name: String,
+         name: String,
         // frameworks: Array
     },
 };
