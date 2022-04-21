@@ -1,9 +1,11 @@
 <template>
   <Layout>
-    <h1 class="text-3xl font-bold">
-      Users
-    </h1>
-
+      <h1 class="text-3xl font-bold">Users</h1>
+      <div class="flex items-center">
+            <p class="text-md ml-4">
+                Welcome Back, {{ name }}!
+            </p>
+      </div>
     <div style="margin-top: 400px">
       <p>The current time is {{ time }}.</p>
 
@@ -27,7 +29,10 @@ import Layout from "../Shared/Layout";
 export default {
    name: 'home',
     components: { Layout, Link },
-    props: { time: String }
+    props: {
+        time: String,
+        name: String,
+    },
 };
 </script>
 
@@ -35,8 +40,7 @@ export default {
 
 p {
     font-family: bold;
-    font-size: 20px;
-    margin-top: 400px;
+    font-size: 25px;
 }
 
 </style>
