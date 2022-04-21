@@ -24,12 +24,15 @@ Route::get('/', function () {
 
 Route::get('/users', function () {
     return Inertia::render('Users', [
-        'time' => now()->toTimeString()
+        'time' => now()->toTimeString(),
+        'name' => 'Mesaque'
     ]);
 });
 
 Route::get('/settings', function () {
-    return Inertia::render('Settings');
+    return Inertia::render('Settings', [
+        'name' => 'Mesaque'
+    ]);
 });
 
 Route::post('/logout', function () {
