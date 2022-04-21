@@ -20,6 +20,8 @@
 <script setup>
 import Layout from "../Shared/Layout.vue";
 
+Layout: Layout
+
 defineProps({
     name: String,
 });
