@@ -3,7 +3,12 @@ import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
 
 createInertiaApp({
-  resolve: name => import(`./Pages/${name}`),
+  resolve: name => {
+  let page = require(`./Pages/${name}`).default;
+
+  return page;
+
+  },
   setup({ el, App, props, plugin }) {
     createApp({ render: () => h(App, props) })
       .use(plugin)
