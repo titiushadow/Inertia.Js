@@ -1,4 +1,5 @@
 <template>
+    <Head title="My App" />
 
 <section class="p-6 bg-gray-200">
     <header class="flex justify-between">
