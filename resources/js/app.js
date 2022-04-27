@@ -20,7 +20,7 @@ createInertiaApp({
       .component("Link", Link)
       .component("Head", Head)
   },
-  title: title => `My App - ${title}`
+  title: title => `My app ${title}`
 })
 
 InertiaProgress.init({
