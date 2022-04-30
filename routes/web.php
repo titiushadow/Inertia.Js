@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\homeController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Models\User;
@@ -18,22 +17,20 @@ use App\Models\User;
 */
 
 Route::get('/', function () {
-    return Inertia::render('home', [
-        'name' => 'Mesaque',
-        'frameworks' => ['Vue', 'Inertia', 'Laravel']
-    ]);
+    return Inertia::render('Home');
 });
 
 Route::get('/users', function () {
     return Inertia::render('Users', [
-        'users' => User::all()
+        'users' => User::paginate(10)->through(fn($user) => [
+            'id' => $user->id,
+            'name' => $user->name
+        ])
     ]);
 });
 
 Route::get('/settings', function () {
-    return Inertia::render('Settings', [
-        'name' => 'Mesaque'
-    ]);
+    return Inertia::render('Settings');
 });
 
 Route::post('/logout', function () {
