@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\homeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +26,7 @@ Route::get('/', function () {
 
 Route::get('/users', function () {
     return Inertia::render('Users', [
-        'time' => now()->toTimeString(),
-        'name' => 'Mesaque'
+        'users' => User::all()
     ]);
 });
 
