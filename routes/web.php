@@ -17,7 +17,7 @@ use App\Models\User;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Home');
+    return Inertia::render('home');
 });
 
 Route::get('/users', function () {
