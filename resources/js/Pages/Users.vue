@@ -35,6 +35,8 @@
 <script setup>
 import Pagination from "../Shared/Pagination";
 
-defineProps({ users: Object });
+defineProps({
+    users: Object,
+});
 
 </script>
