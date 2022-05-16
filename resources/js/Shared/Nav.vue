@@ -18,10 +18,15 @@
           Settings
         </NavLink>
       </li>
+
+      <li>
+        <NavLink href="/logout" method="post" as="button">
+          Log Out
+        </NavLink>
+      </li>
     </ul>
   </nav>
 </template>
-
 
 <script>
 import NavLink from "./NavLink";
