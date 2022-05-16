@@ -1,39 +1,43 @@
 <template>
-    <Head>
-        <title> My App </title>
+  <Head>
     <meta
-        type="description"
-        content="Information about my app"
-        head-key="description"
+      type="description"
+      content="Information about my app"
+      head-key="description"
     >
-    </Head>
+  </Head>
 
-<section class="p-6 bg-gray-200">
+  <section class="p-6 bg-gray-200">
     <header class="flex justify-between">
+      <div class="flex items-center">
         <h1 class="font-bold text-lg">
-            My Website
+          My App
         </h1>
-        <Nav />
+
+        <p class="text-sm ml-4">
+          Welcome Back, {{ username }}!
+        </p>
+      </div>
+
+      <Nav />
     </header>
-</section>
+  </section>
 
-<section class="p-6">
+  <section class="p-6">
     <div class="max-w-3xl mx-auto">
-        <slot />
+      <slot />
     </div>
-</section>
-
+  </section>
 </template>
 
 <script>
-import Nav from "./Nav"
-
+import Nav from "./Nav";
 export default {
-    components: { Nav },
-
-}
+  components: { Nav },
+  computed: {
+    username() {
+      return this.$page.props.auth.user.username;
+    }
+  }
+};
 </script>
-
-<style>
-
-</style>
