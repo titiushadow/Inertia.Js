@@ -1,6 +1,6 @@
 <template>
   <Link
-    class="text-black-500 hover:underline"
+    class="text-black hover:underline"
     :class="{'font-bold underline': active }"
   >
     <slot />
@@ -8,9 +8,7 @@
 </template>
 
 <script>
-import { Link } from "@inertiajs/inertia-vue3";
 export default {
-  components: { Link },
   props: {
     active: Boolean
   }
